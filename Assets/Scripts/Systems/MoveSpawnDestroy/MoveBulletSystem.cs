@@ -27,7 +27,7 @@ public partial struct MoveBulletSystem : ISystem
         _queryEnemy = state.GetEntityQuery(queryEnemies);
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         var enemyIds = _queryEnemy.ToComponentDataArray<EnemyIdComponent>(Allocator.TempJob);
@@ -72,10 +72,8 @@ public partial struct MoveBulletJob : IJobEntity
             Ecb.AddComponent(entity, new DestroyComponent());
             foreach (var effect in bulletInfo.ListEffects)
             {
-                if (mapping.ContainsKey(effect))
-                {
-                    mapping[effect].AppendToBuffer(enemyEntity, Ecb);
-                }
+                if (!mapping.ContainsKey(effect)) return;
+                mapping[effect].AppendToBuffer(enemyEntity, Ecb);
             }
         }
         else

@@ -61,7 +61,7 @@ public partial struct BurningJob : IJobEntity
     }
 }
 
-[BurstCompile]
+//[BurstCompile]
 public partial struct OffBurningComponentJob : IJobEntity
 {
     public EntityCommandBuffer Ecb;
