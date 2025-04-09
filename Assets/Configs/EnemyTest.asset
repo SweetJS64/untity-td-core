@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3199b8cb9072145b3150cb50f70098, type: 3}
+  m_Name: EnemyTest
+  m_EditorClassIdentifier: 
+  EnemyMaxHp: 500
+  EnemyDirection: 5
+  EnemySpeed: 4
+  AnimPrefab: {fileID: 3144760654791316788, guid: b9dc29d6ff51fcd48bd797ece77df20d, type: 3}
+  minSpawnX: -8
+  maxSpawnX: 8
+  minSpawnY: -4
+  maxSpawnY: 2
